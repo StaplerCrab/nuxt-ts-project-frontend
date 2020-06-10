@@ -1,0 +1,33 @@
+{
+  "name": "nuxt-ts-project",
+  "version": "1.0.0",
+  "description": "My superior Nuxt.js project",
+  "author": "Adrien Escobin",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "generate-types": "graphql-codegen --config codegen.yml"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.1",
+    "graphql-tag": "^2.10.3",
+    "nuxt": "^2.0.0",
+    "nuxt-property-decorator": "^2.7.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.15.2",
+    "@graphql-codegen/typescript": "^1.15.2",
+    "@graphql-codegen/typescript-graphql-files-modules": "^1.15.2",
+    "@graphql-codegen/typescript-operations": "^1.15.2",
+    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/eslint-config-typescript": "^1.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2"
+  }
+}
