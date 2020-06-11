@@ -1,5 +1,6 @@
 <template>
     <div>
+        <nuxt-link to="/signup">TO SIGNUP</nuxt-link>
         <h1>Main Page</h1>
         <div class="container">
             <ul>
@@ -25,32 +26,5 @@ import { ItemsQuery } from '../types/types'
 })
 
 export default class IndexPage extends Vue { }
-
-
-// interface Item {
-//     id: number
-//     name: string
-// }
-
-// interface Data {
-//     allItems: Item []
-// }
-
-// export default Vue.extend({
-//     data(): Data {
-//         return {
-//             allItems: []
-//         }
-//     },
-//     computed: {
-//       items(): Item[] {
-//           return this.res
-//       }
-//     },
-//     apollo: {
-//         res: () => ItemQuery
-//     }
-// })
-    
 
 </script>
