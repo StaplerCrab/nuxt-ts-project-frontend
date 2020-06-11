@@ -7,6 +7,9 @@
                 <li v-for="item in items" :key="item.id">{{ item.name }}</li>
             </ul>
         </div>
+        <div class="container">
+            <h1>Username: {{ getUsername }}</h1>
+        </div>
     </div>
 </template>
 
@@ -14,8 +17,10 @@
 // import Vue from 'vue'
 import ItemQuery from '~/apollo/queries/items.graphql'
 import "vue-apollo"
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue, namespace, Getter } from 'nuxt-property-decorator'
 import { ItemsQuery } from '../types/types'
+
+const user = namespace('user')
 
 @Component({
     apollo: {
@@ -25,6 +30,10 @@ import { ItemsQuery } from '../types/types'
     }
 })
 
-export default class IndexPage extends Vue { }
+export default class IndexPage extends Vue {
+
+    @user.Getter
+    public getUsername!: string    
+ }
 
 </script>

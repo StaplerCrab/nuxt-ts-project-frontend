@@ -2,15 +2,15 @@
     <div class="user">
         <p>
             <label>Username</label>
-            <input type="text" v-model="localData.username">
+            <input id="un" type="text" v-model="localData.username">
         </p>
         <p>
             <label>Password</label>
-            <input type="text" v-model="localData.password">
+            <input id="pw" type="text" v-model="localData.password">
         </p>
         <p>
             <label>E-mail</label>
-            <input type="email" v-model="localData.email">
+            <input id="em" type="email" v-model="localData.email">
         </p>
         <p>
             <button @click="update">Submit</button>
@@ -49,6 +49,11 @@ export default class User extends Vue {
 
     public update(): void {
         this.updateUserInfo(this.localData)
+        this.clearFields()
+    }
+
+    private clearFields(): void {
+        
     }
 
 }
